@@ -1,3 +1,5 @@
+## Original License
+
 MIT License
 
 Copyright (c) 2019 Fabien Casters
@@ -19,3 +21,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Modifications
+
+Forked from [https://github.com/vaga/hugo-theme-m10c](https://github.com/vaga/hugo-theme-m10c) on 2021-02-14.

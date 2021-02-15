@@ -1,3 +1,9 @@
+# Modified version of the m10c Hugo theme
+Forked from the [original repository](https://github.com/vaga/hugo-theme-m10c) on 2021-02-14.
+
+---
+Below: Copy of the original `README.md`.
+
 # m10c theme
 
 ![Intro](https://github.com/vaga/hugo-theme-m10c/blob/master/images/cover.png)
