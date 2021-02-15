@@ -2,8 +2,9 @@
 Forked from the [original repository](https://github.com/vaga/hugo-theme-m10c) on 2021-02-14.
 
 ## Modifications
-- added shortcode `{{<toc>}}` for table of contents
+- added shortcode `{{<toc>}}` for table of contents, use `german` tag for German title
 - added `{{ .Content}}` to list layout for header text
+- added `audience` parameter for blog posts
 
 ---
 Below: Copy of the original `README.md`.
