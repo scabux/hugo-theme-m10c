@@ -1,6 +1,10 @@
 # Modified version of the m10c Hugo theme
 Forked from the [original repository](https://github.com/vaga/hugo-theme-m10c) on 2021-02-14.
 
+## Modifications
+- added shortcode `{{<toc>}}` for table of contents
+- added `{{ .Content}}` to list layout for header text
+
 ---
 Below: Copy of the original `README.md`.
 

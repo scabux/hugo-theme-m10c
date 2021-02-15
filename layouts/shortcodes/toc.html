@@ -1,0 +1,18 @@
+<style>
+    .toc {
+        margin-top: 10px;
+        display: inline-block;
+        padding: 10px 10px 0 10px;
+        background: {{ .Site.Params.Style.darkestColor }};
+    }
+    ul {
+        margin-top: 0;
+        padding-left: 25px;
+        list-style-type: square;
+    }
+</style>
+
+<div class='toc'>
+    <b>{{ if in .Page.Params.tags "german"}} Inhalt {{ else }} Content {{ end }}</b>
+    {{ .Page.TableOfContents }}
+</div>
