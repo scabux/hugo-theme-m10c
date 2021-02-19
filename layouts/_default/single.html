@@ -12,6 +12,12 @@
           {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
           {{ .ReadingTime }} min read
         </div>
+        {{- if .Params.language }}
+        <div>
+            {{ partial "icon.html" (dict "ctx" $ "name" "globe") }}
+            {{ .Params.language }}
+        </div>
+        {{ end }}
         {{- if .Params.audience }}
         <div>
             {{ partial "icon.html" (dict "ctx" $ "name" "users") }}

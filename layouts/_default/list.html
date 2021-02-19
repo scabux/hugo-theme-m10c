@@ -10,6 +10,11 @@
             {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
             {{ .PublishDate.Format "Jan 2, 2006" }}
             
+            {{- if .Params.language }}
+                -
+                {{ partial "icon.html" (dict "ctx" $ "name" "globe") }}
+                {{ .Params.language }} 
+            {{ end }}
             {{- if .Params.audience }}
                 -
                 {{ partial "icon.html" (dict "ctx" $ "name" "users") }}

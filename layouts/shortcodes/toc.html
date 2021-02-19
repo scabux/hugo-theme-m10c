@@ -13,6 +13,6 @@
 </style>
 
 <div class='toc'>
-    <b>{{ if in .Page.Params.tags "german"}} Inhalt {{ else }} Content {{ end }}</b>
+    <b>{{ if eq .Page.Params.language "German"}} Inhalt {{ else }} Content {{ end }}</b>
     {{ .Page.TableOfContents }}
 </div>
