@@ -5,6 +5,8 @@ Forked from the [original repository](https://github.com/vaga/hugo-theme-m10c) o
 - added shortcode `{{<toc>}}` for table of contents, user `language="German"` for German title
 - added `{{ .Content }}` to list layout for header text
 - added `audience` and `language` parameters for blog posts
+- added support for the `categories` taxonomy
+- modified the 404 page
 
 ---
 Below: Copy of the original `README.md`.

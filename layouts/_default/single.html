@@ -17,13 +17,21 @@
             {{ partial "icon.html" (dict "ctx" $ "name" "globe") }}
             {{ .Params.language }}
         </div>
-        {{ end }}
+        {{- end }}
+        {{- if .Params.categories }}
+        <div>
+            {{ partial "icon.html" (dict "ctx" $ "name" "folder") }}
+            {{ range ($.Site.GetPage "taxonomyTerm" "categories").Pages  }}
+                <a href="{{.Permalink}}">{{.Title}}</a>
+            {{ end }}
+        </div>
+        {{- end }}
         {{- if .Params.audience }}
         <div>
             {{ partial "icon.html" (dict "ctx" $ "name" "users") }}
             {{ .Params.audience }}
         </div>
-        {{ end }}
+        {{- end }}
         {{- with .Params.tags }}
         <div>
           {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}

@@ -2,9 +2,14 @@
   <article>
     <h1>{{ .Title }}</h1>
     <ul class="tags-list">
+      {{ $type := .Data.Plural }}
       {{ range .Data.Terms.ByCount }}
         <li class="tags-list-item">
-            {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
+            {{ if in $type "tag" }}
+                {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
+            {{ else }}
+                {{ partial "icon.html" (dict "ctx" $ "name" "folder") }}
+            {{ end }}
             <a class="tags-list-item-title" href="{{ .Page.Permalink }}">
               ({{ .Count }})
               {{ .Page.Title }}
