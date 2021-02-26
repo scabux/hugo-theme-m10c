@@ -16,12 +16,15 @@
                 {{ .Params.language }} 
             {{- end }}
 
-            {{- if .Params.categories }}
-                -
+
+            {{- with .Params.categories }}
+                -    
                 {{ partial "icon.html" (dict "ctx" $ "name" "folder") }}
-                {{ range ($.Site.GetPage "taxonomyTerm" "categories").Pages  }}
-                    <a href="{{.Permalink}}">{{.Title}}</a>
-                {{ end }}
+                {{- range . -}}
+                    {{ with $.Site.GetPage (printf "/%s/%s" "categories" . ) }}
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    {{- end }}
+                {{- end }}
             {{- end }}
 
             {{- if .Params.audience }}

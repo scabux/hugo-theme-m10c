@@ -18,14 +18,18 @@
             {{ .Params.language }}
         </div>
         {{- end }}
-        {{- if .Params.categories }}
+
+        {{- with .Params.categories }}
         <div>
-            {{ partial "icon.html" (dict "ctx" $ "name" "folder") }}
-            {{ range ($.Site.GetPage "taxonomyTerm" "categories").Pages  }}
-                <a href="{{.Permalink}}">{{.Title}}</a>
-            {{ end }}
+          {{ partial "icon.html" (dict "ctx" $ "name" "folder") }}
+          {{- range . -}}
+            {{ with $.Site.GetPage (printf "/%s/%s" "categories" . ) }}
+              <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
+            {{- end }}
+          {{- end }}
         </div>
         {{- end }}
+
         {{- if .Params.audience }}
         <div>
             {{ partial "icon.html" (dict "ctx" $ "name" "users") }}
