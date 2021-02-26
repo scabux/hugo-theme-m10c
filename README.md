@@ -7,6 +7,7 @@ Forked from the [original repository](https://github.com/vaga/hugo-theme-m10c) o
 - added `audience` and `language` parameters for blog posts
 - added support for the `categories` taxonomy
 - modified the 404 page
+- added `icon` shortcode to access corresponding partial from Mardown
 
 ---
 Below: Copy of the original `README.md`.
